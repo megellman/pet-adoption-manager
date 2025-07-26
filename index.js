@@ -2,9 +2,9 @@ import { input, select } from '@inquirer/prompts';
 
 const animals = [];
 
-addAnimal();
+promptUser();
 
-async function addAnimal(){
+async function promptUser(){
     const newAnimal = {
         species: await input({ message: "What species are they?" }),
         name: await input({ message: "What is their name?" }),
@@ -19,7 +19,7 @@ async function addAnimal(){
         choices: ["Add another animal", "View available animals", "Generate adoption webpage", "Exit"]
     });
     if (nextAction === "Add another animal") {
-        await addAnimal();
+        await promptUser();
     } else if (nextAction === "View available animals"){ 
         const viewAnimal = await select({
             message: "Select an animal to view more details",
