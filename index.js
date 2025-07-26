@@ -1,8 +1,6 @@
-import { input, select } from '@inquirer/prompts';
+import { input, select, checkbox } from '@inquirer/prompts';
 
 const animals = [];
-
-promptUser();
 
 async function promptUser(){
     const newAnimal = {
@@ -10,7 +8,19 @@ async function promptUser(){
         name: await input({ message: "What is their name?" }),
         age: await input({ message: "How old are they?" }),
         breed: await input({ message: "What is their breed?" }),
-        specialNote: await input({ message: "Anything else to note?" }),
+        specialNote: await input({ message: "Special note" })
+    }
+    if(newAnimal.species === "dog"){
+        newAnimal.trainingStatus = await checkbox({
+            message: "What is their training status?",
+            choices: ["House trained", "Crate trained", "Leash trained", "Socialized", "Basic commands"]
+        })
+        console.log(newAnimal)
+    } else if(newAnimal.species === "cat"){
+        newAnimal.status = await checkbox({
+            message: "What is their status?",
+            choices: ["Indoor", "Outdoor"]
+        })
     }
     animals.push(newAnimal);
     console.log('Animals: ', animals);
@@ -33,3 +43,5 @@ async function promptUser(){
         generateWebpage();
     }
 }
+
+promptUser();
