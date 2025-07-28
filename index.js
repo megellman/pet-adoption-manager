@@ -1,10 +1,5 @@
 import { input, select, checkbox } from '@inquirer/prompts';
-import Animal from './lib/Animal.js';
-import Cat from './lib/Cat.js';
-import Dog from './lib/Dog.js';
-import OtherPet from './lib/OtherPet.js';
 import fs from 'node:fs';
-import { error } from 'node:console';
 
 let animals = [];
 fs.readFile("./data/animals.json", "utf-8", (err, data) => {
