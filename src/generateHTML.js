@@ -1,20 +1,20 @@
 import Cat from "../lib/Cat.js";
 import Dog from "../lib/Dog.js";
 import OtherPet from "../lib/OtherPet.js";
-// import fs from 'node:fs';
 import {promises as fs} from 'fs';
 
 function generateAnimalCards(animals) {
+    console.log(animals);
     let cards = "";
     animals.forEach(animal => {
-        if(animal.species === "cat"){
-            let cat = new Cat(animal.name, animal.age, animal.breed, animal.specialNote, animal.status, animal.animalData);
+        if(animal.species === "Cat"){
+            let cat = new Cat(animal.species, animal.name, animal.age, animal.breed, animal.status, animal.animalData);
             cards += cat.generateCard();
-        } else if(animal.species === "dog"){
-            let dog = new Dog(animal.name, animal.age, animal.breed, animal.specialNote,animal.training, animal.animalData);
+        } else if(animal.species === "Dog"){
+            let dog = new Dog(animal.species, animal.name, animal.age, animal.breed,animal.trainingStatus, animal.animalData);
             cards += dog.generateCard();
         } else {
-            let pet = new OtherPet(animal.species, animal.name, animal.age, animal.breed, animal.specialNote, animal.animalData);
+            let pet = new OtherPet(animal.species, animal.name, animal.age, animal.breed, animal.animalData);
             cards += pet.generateCard();
         }
     });

@@ -17,19 +17,18 @@ fs.readFile("./data/animals.json", "utf-8", (err, data) => {
 });
 async function promptUser() {
     const newAnimal = {
-        species: await input({ message: "What species are they?" }),
-        name: await input({ message: "What is their name?" }),
-        age: await input({ message: "How old are they?" }),
-        breed: await input({ message: "What is their breed?" }),
-        specialNote: await input({ message: "Special note" })
+        species: capitalizeWords(await input({ message: "What species are they?"})),
+        name: capitalizeWords(await input({ message: "What is their name?"})),
+        age: capitalizeWords(await input({ message: "How old are they?"})),
+        breed: capitalizeWords(await input({ message: "What is their breed?"}))
     }
-    if (newAnimal.species === "dog") {
+    if (newAnimal.species === "Dog") {
         newAnimal.trainingStatus = await checkbox({
             message: "What is their training status?",
             choices: ["House trained", "Crate trained", "Leash trained", "Socialized", "Basic commands"]
         })
         console.log(newAnimal)
-    } else if (newAnimal.species === "cat") {
+    } else if (newAnimal.species === "Cat") {
         newAnimal.status = await checkbox({
             message: "What is their status?",
             choices: ["Indoor", "Outdoor"]
@@ -59,4 +58,8 @@ async function promptUser() {
     fs.writeFile("./data/animals.json", JSON.stringify(animals), (err) => {
         if (err) console.error(err);
     })
+}
+
+function capitalizeWords(input){
+    return input.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
