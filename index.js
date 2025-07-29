@@ -1,10 +1,11 @@
 import { input, select, checkbox } from '@inquirer/prompts';
 import fs from 'node:fs';
+import generateWebpage from './src/generateHTML.js';
 
 let animals = [];
 fs.readFile("./data/animals.json", "utf-8", (err, data) => {
     if (err) console.error(err);
-    if (data){
+    if (data) {
         try {
             let arr = JSON.parse(data);
             animals.push(...arr);
@@ -51,11 +52,11 @@ async function promptUser() {
         })
         console.log(viewAnimal);
     } else if (nextAction === "Generate adoption webpage") {
-        generateWebpage();
+       generateWebpage(animals);
     } else if (nextAction === "Exit") {
         console.log(animals);
-        fs.writeFile("./data/animals.json", JSON.stringify(animals), (err) => {
-            if (err) throw error;
-        })
     }
+    fs.writeFile("./data/animals.json", JSON.stringify(animals), (err) => {
+        if (err) console.error(err);
+    })
 }
