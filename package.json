@@ -1,20 +1,22 @@
 {
   "name": "pet-adoption-manager",
   "version": "1.0.0",
-  "description": "## 📌 User Story AS AN animal shelter manager   I WANT to track animals available for adoption with their details   SO THAT I can easily manage shelter records and share pet profiles with potential adopters",
+  "description": "pet adoption",
   "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@inquirer/prompts": "^7.7.1"
+    "@inquirer/prompts": "^7.7.1",
+    "jest": "^30.0.5"
   },
   "type": "module"
 }
