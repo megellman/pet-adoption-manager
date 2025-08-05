@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import generateWebpage from './src/generateHTML.js';
 
 let animals = [];
+// 
 fs.readFile("./data/animals.json", "utf-8", (err, data) => {
     if (err) console.error(err);
     if (data) {

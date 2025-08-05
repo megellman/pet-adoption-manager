@@ -1,72 +1,53 @@
-# 🚀 Project: CLI Pet Adoption Center Manager
+# 🐾 CLI Pet Adoption Center Manager
 
-## 📌 User Story
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+## Technology Used
+| Technology Used | Resource URL |
+| --------- |:-----------:|
+| JavaScript | [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| Node.js  | [nodejs.org](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) |
+| Inquirer  | [npmjs.com](https://www.npmjs.com/package/inquirer) |
+| Jest | [jestjs.io](https://jestjs.io/) |
+| Node.js File System | [nodejs.org](https://nodejs.org/api/fs.html#file-system) |
+
+## Description
+
+[Watch the Demo Video](#) <!-- Replace with your video link -->
+
+I developed a command-line pet adoption center manager that allows shelter staff to easily create, view, and manage a list of animals available for adoption. This tool uses object-oriented programming principles, command-line prompts, HTML generation, and testing to ensure reliability and usability.
+
+Users can add new animals, view current listings, and generate an adoption webpage complete with animal profiles and contact links.
+
+## User Story
+
 AS AN animal shelter manager  
 I WANT to track animals available for adoption with their details  
 SO THAT I can easily manage shelter records and share pet profiles with potential adopters
 
-## ✅ Acceptance Criteria
-GIVEN a command-line application that accepts user input  
-WHEN I start the application  
-THEN I am prompted to enter a new animal's details (species, name, age, breed, and special notes)  
-WHEN I finish adding an animal  
-THEN I am presented with a menu to add another animal, view available animals, generate an adoption webpage, or exit  
-WHEN I choose to view available animals  
-THEN I see a list of all animals with their name and species, and can select one to view full details  
-WHEN I choose to generate an adoption webpage  
-THEN an HTML file is generated that displays profiles for each animal with their photo (placeholder image URL), details, and a contact button  
-WHEN I click on the contact button  
-THEN my default email program opens with the subject “Adoption Inquiry: [Animal Name]”
+## Features
 
-## 📝 Requirements & Key Skills Tested
-✅ Object-Oriented Programming & Class Inheritance:
-- `Animal` base class with properties: name, age, species, breed, notes
-- Subclasses:
-  - `Dog` (extra: training status)
-  - `Cat` (extra: indoor/outdoor status)
-  - `OtherPet` (for birds, reptiles, etc.)
+- Object-Oriented Class Structure:
+  - `Animal` base class with common properties
+  - Subclasses: `Dog` (with training status), `Cat` (with indoor/outdoor status), `OtherPet` (for birds, reptiles, etc.)
+- CLI prompts with [Inquirer](https://www.npmjs.com/package/inquirer)
+- JSON data persistence using Node’s File System
+- HTML generation to create a clean and informative adoption page
+- Jest unit testing for all classes and utility functions
+- Follows Git best practices with organized structure and `.gitignore`
 
-✅ CLI with Inquirer to gather user inputs  
-✅ HTML Generation to output adoption profiles  
-✅ File I/O to save animal records to JSON  
-✅ Testing with Jest for each class and utility function  
-✅ Git best practices, clean folder structure, `.gitignore`, and README with instructions
 
-## 🔧 Suggested Directory Structure
-.
-├── __tests__/  
-│   ├── Animal.test.js  
-│   ├── Dog.test.js  
-│   ├── Cat.test.js  
-│   └── OtherPet.test.js  
-├── data/                  // stores animals.json  
-├── dist/                  // generated adoption.html  
-├── lib/                   // classes: Animal.js, Dog.js, Cat.js, OtherPet.js  
-├── src/                   // HTML template helper  
-├── .gitignore  
-├── index.js  
-└── package.json
+## Megan Ellman
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://megellman.github.io/react-portfolio/portfolio)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/megan-ellman/)
+[![github](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/megellman)
 
-## 💻 Example Class Design
+## License
 
-**Animal.js**
-```js
-class Animal {
-  constructor(name, age, species, breed, notes) {
-    this.name = name;
-    this.age = age;
-    this.species = species;
-    this.breed = breed;
-    this.notes = notes;
-  }
+[MIT](https://choosealicense.com/licenses/mit/)
 
-  getProfile() {
-    return `${this.name} (${this.species}) - Age: ${this.age}, Breed: ${this.breed}`;
-  }
+## Questions
 
-  getRole() {
-    return 'Animal';
-  }
-}
+[GitHub](https://github.com/megellman)
 
-export default Animal;
+If you have any additional questions, you can reach me at meganlellman@gmail.com
