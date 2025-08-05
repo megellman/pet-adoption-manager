@@ -1,4 +1,4 @@
-const Cat = require("../lib/Cat.js");
+import { Cat } from "../lib/Cat.js";
 
 describe("Cat class", () => {
     test("has a species, name, age, breed, and status defined", () => {

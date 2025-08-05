@@ -1,4 +1,4 @@
-const Dog = require('../lib/Dog.js');
+import { Dog } from "../lib/Dog.js";
 
 describe("Dog class", () => {
     test("has species, name, age, breed training status correctly defined", () => {

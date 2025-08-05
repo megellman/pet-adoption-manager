@@ -1,4 +1,4 @@
-const Animal = require("../lib/Animal.js");
+import { Animal } from "../lib/Animal.js";
 
 describe("Animal class", () => {
     test("has a species, name, age, and breed defined", () => {

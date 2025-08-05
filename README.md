@@ -1,4 +1,4 @@
-# 🐾 CLI Pet Adoption Center Manager
+# CLI Pet Adoption Center Manager
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
@@ -13,17 +13,11 @@
 
 ## Description
 
-[Watch the Demo Video](#) <!-- Replace with your video link -->
+[Watch the Demo Video](https://app.screencastify.com/watch/us0GqfJmYvK9LXHdRsMN)
 
 I developed a command-line pet adoption center manager that allows shelter staff to easily create, view, and manage a list of animals available for adoption. This tool uses object-oriented programming principles, command-line prompts, HTML generation, and testing to ensure reliability and usability.
 
 Users can add new animals, view current listings, and generate an adoption webpage complete with animal profiles and contact links.
-
-## User Story
-
-AS AN animal shelter manager  
-I WANT to track animals available for adoption with their details  
-SO THAT I can easily manage shelter records and share pet profiles with potential adopters
 
 ## Features
 

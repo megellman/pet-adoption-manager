@@ -1,4 +1,4 @@
-const OtherPet = require('../lib/otherPet.js');
+import { OtherPet } from "../lib/OtherPet.js";
 
 describe("otherPet class", () => {
     test("has species, name, age, breed training status correctly defined", () => {
